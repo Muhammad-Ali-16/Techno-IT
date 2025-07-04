@@ -611,14 +611,21 @@ ul {
     font-size: small;
 }
 
+.teams-main .card-icons-main{
+    display:flex;
+    flex-direction:row;
+}
+
 .teams-main .card .bi {
     margin: 0px 3px;
-    border: 1px solid #8f8f8f;
+    border: 1.4px solid #8f8f8f96;
     border-radius: 50px;
     height: 32px;
     width: 32px;
-    display: inline-block;
+    display: flex;
     cursor: pointer;
+    justify-content:center;
+    align-items:center;
 }
 
 .teams-main .card .bi:hover {
