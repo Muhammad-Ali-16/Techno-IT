@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+    --primary-background: #f2f3f8;
+    --primary-color-light: #d4d4d4;
+    --text-primary: #000;
+    --nav-hover: #025add;
+    --primary-blue: #025add;
+    --bg-tranparent: #00000000;
+    --bg-transparent-2: #0000008a;
+}
+
+.dark {
+    --primary-background: #161617;
+    --primary-color-light: #eee;
+    --text-primary: #eee;
+    --nav-hover: #025add;
+    --primary-blue: #025add;
+    --bg-tranparent: #0000008a;
+    --bg-transparent-2: #0000008a;
+}
+
+.max-w-8xl {
+    max-width: 1180px;
+    padding-inline: calc(var(--spacing) * 8);
+    margin: 0 auto;
+
+    @media (width >=80rem) {
+        padding-inline: calc(var(--spacing) * 0);
+    }
+}
+
+.main_bg_img {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./assets/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+}
+
+.nav-scroll {
+    position: fixed;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    transform: translateY(90px);
+    transition: .5s all;
+    background: var(--primary-background);
+    z-index: 999;
+}
+
+.page_header_bg {
+    position: relative;
+    background-image: url(./assets/page-header-bg.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.page_header_bg::before {
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: var(--primary-background);
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.5;
+}
