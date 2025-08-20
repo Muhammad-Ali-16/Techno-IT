@@ -20,17 +20,39 @@ function App() {
       <div className="main_bg_img"></div>
       <BrowserRouter basename="/Techno-IT/">
         <Routes>
-          <Route element={<Layout />}> <Route path="/" element={<Home />} /> </Route>
-          <Route element={<Layout />}><Route path="/services" element={<><PageHero title="Our Services" /> <Services /></>} /></Route>
-          <Route element={<Layout />}><Route path="/portfolio" element={<><PageHero title="Our Portfolio" /> <Portfolio /></>} /> </Route>
-          <Route element={<Layout />}><Route path="/testimonials" element={<><PageHero title="Our Testimonials" /> <Testimonials /></>} /> </Route>
-          <Route element={<Layout />}><Route path="/teams" element={<><PageHero title="Our Team" /> <Teams /></>} /> </Route>
-          <Route element={<Layout />}><Route path="/faqs" element={<><PageHero title="FAQs" /> <FAQs /></>} /> </Route>
-          <Route element={<Layout />}><Route path="/blog" element={<><PageHero title="Our Blog" /> <Blog /></>} /> </Route>
-          <Route element={<Layout />}><Route path="/about" element={<><PageHero title="About Us" /> <About /></>} /> </Route>
-          <Route element={<Layout />}><Route path="/pricing" element={<><PageHero title="Our Pakages" /> <Pricing /></>} /> </Route>
-          <Route element={<Layout />}><Route path="/termsconditions" element={<><PageHero title="Terms & Conditions" /> <TermsConditions /></>} /> </Route>
-          <Route element={<Layout />}><Route path="/privacypolicy" element={<><PageHero title="Privacy Policy" /> <PrivacyPolicy /></>} /> </Route>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/services" element={<><PageHero title="Our Services" /> <Services /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/portfolio" element={<><PageHero title="Our Portfolio" /> <Portfolio /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/testimonials" element={<><PageHero title="Our Testimonials" /> <Testimonials /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/teams" element={<><PageHero title="Our Team" /> <Teams /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/faqs" element={<><PageHero title="FAQs" /> <FAQs /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/blog" element={<><PageHero title="Our Blog" /> <Blog /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/about" element={<><PageHero title="About Us" /> <About /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/pricing" element={<><PageHero title="Our Pakages" /> <Pricing /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/termsconditions" element={<><PageHero title="Terms & Conditions" /> <TermsConditions /></>} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path="/privacypolicy" element={<><PageHero title="Privacy Policy" /> <PrivacyPolicy /></>} />
+          </Route>
 
         </Routes>
       </BrowserRouter>

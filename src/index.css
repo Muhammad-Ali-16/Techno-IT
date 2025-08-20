@@ -6,7 +6,7 @@
     --text-primary: #000;
     --nav-hover: #025add;
     --primary-blue: #025add;
-    --bg-tranparent: #00000000;
+    --hero-bg-tranparent: #0000008a;
     --bg-transparent-2: #0000008a;
 }
 
@@ -16,7 +16,7 @@
     --text-primary: #eee;
     --nav-hover: #025add;
     --primary-blue: #025add;
-    --bg-tranparent: #0000008a;
+    --hero-bg-tranparent: #0000008a;
     --bg-transparent-2: #0000008a;
 }
 

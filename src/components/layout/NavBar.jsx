@@ -5,9 +5,11 @@ import logo from '../../assets/logo.png';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false)
+  const [isScroll, setIsScroll] = useState(false)
   const navRef = useRef(null)
 
-  const navLink = "px-3 py-2 text-sm font-medium text-[var(--text-primary)] transition duration-200 hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)]";
+  const navLink = `px-3 py-2 text-sm font-medium transition duration-200 hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] ${isScroll ? 'text-[var(--text-primary)]' : 'text-[#eee]'}`;
+  const navOverlayLink = `px-3 py-2 text-sm font-medium transition duration-200 hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] text-[var(--text-primary)]`;
   const themeButtonClass = "flex items-center justify-center rounded-full bg-[var(--primary-color-light)] w-12 h-12 cursor-pointer";
 
   const handleThemetoggle = () => {
@@ -19,11 +21,13 @@ function Navbar() {
     const HandleScroll = () => {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         navRef.current?.classList.add('nav-scroll');
-        navRef.current?.classList.add('shadow-md')
+        navRef.current?.classList.add('shadow-md');
+        setIsScroll(!isScroll)
       }
       else {
         navRef.current?.classList.remove('nav-scroll');
         navRef.current?.classList.remove('shadow-md')
+        setIsScroll(false)
       }
     }
 
@@ -60,7 +64,7 @@ function Navbar() {
           </button>
 
           <div className="flex xl:hidden items-center text-[var(--text-primary)]">
-            <button className=" cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+            <button className={`cursor-pointer ${isScroll ? 'text-[var(--text-primary)]' : 'text-[#eee]'}`} onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? (<i className="bi bi-x text-3xl"></i>) : (<i className="bi bi-list text-3xl"></i>)}
             </button>
           </div>
@@ -69,13 +73,13 @@ function Navbar() {
       </div>
 
       <div className={`xl:hidden bg-[var(--primary-background)] px-4 pb-4 space-y-2 transition-all duration-500 overflow-hidden ${isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}>
-        <Link className={`${navLink} block`} to="/">Home</Link>
-        <Link className={`${navLink} block`} to="/services">Services</Link>
-        <Link className={`${navLink} block`} to="/portfolio">Portfolio</Link>
-        <Link className={`${navLink} block`} to="/testimonials">Testimonials</Link>
-        <Link className={`${navLink} block`} to="/teams">Teams</Link>
-        <Link className={`${navLink} block`} to="/faqs">FAQs</Link>
-        <Link className={`${navLink} block`} to="/news">News</Link>
+        <Link className={`${navOverlayLink} block`} to="/">Home</Link>
+        <Link className={`${navOverlayLink} block`} to="/services">Services</Link>
+        <Link className={`${navOverlayLink} block`} to="/portfolio">Portfolio</Link>
+        <Link className={`${navOverlayLink} block`} to="/testimonials">Testimonials</Link>
+        <Link className={`${navOverlayLink} block`} to="/teams">Teams</Link>
+        <Link className={`${navOverlayLink} block`} to="/faqs">FAQs</Link>
+        <Link className={`${navOverlayLink} block`} to="/news">News</Link>
 
         <button className={themeButtonClass} onClick={handleThemetoggle}>
           <i className="bi bi-moon-fill"></i>
