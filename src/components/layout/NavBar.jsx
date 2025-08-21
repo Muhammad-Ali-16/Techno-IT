@@ -38,7 +38,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav ref={navRef} className="w-full z-50  absolute ">
+    <nav ref={navRef} className="w-full z-50 absolute ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0 xl:py-3">
         <div className="flex justify-between items-center h-16">
 

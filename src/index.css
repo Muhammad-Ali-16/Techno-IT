@@ -4,20 +4,19 @@
     --primary-background: #f2f3f8;
     --primary-color-light: #d4d4d4;
     --text-primary: #000;
+    --text-light: #3a3a3a;
     --nav-hover: #025add;
     --primary-blue: #025add;
     --hero-bg-tranparent: #0000008a;
     --bg-transparent-2: #0000008a;
+    --card-shadow: #6867676e;
 }
 
 .dark {
     --primary-background: #161617;
     --primary-color-light: #eee;
     --text-primary: #eee;
-    --nav-hover: #025add;
-    --primary-blue: #025add;
-    --hero-bg-tranparent: #0000008a;
-    --bg-transparent-2: #0000008a;
+    --text-light: #eee;
 }
 
 .max-w-8xl {
@@ -25,9 +24,9 @@
     padding-inline: calc(var(--spacing) * 8);
     margin: 0 auto;
 
-    @media (width >=80rem) {
-        padding-inline: calc(var(--spacing) * 0);
-    }
+    /* @media (width >=80rem) {
+        padding-inline: calc(var(--spacing) * 8);
+    } */
 }
 
 .main_bg_img {
