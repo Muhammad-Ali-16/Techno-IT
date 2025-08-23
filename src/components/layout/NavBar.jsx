@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false)
+  const [isLight, setIsLight] = useState(false)
   const [isScroll, setIsScroll] = useState(false)
   const navRef = useRef(null)
 
@@ -13,8 +13,8 @@ function Navbar() {
   const themeButtonClass = "flex items-center justify-center rounded-full bg-[var(--primary-color-light)] w-12 h-12 cursor-pointer";
 
   const handleThemetoggle = () => {
-    document.documentElement.classList.toggle("dark");
-    setIsDark(!isDark)
+    document.documentElement.classList.toggle("light");
+    setIsLight(!isLight)
   };
 
   useEffect(() => {
@@ -22,11 +22,13 @@ function Navbar() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         navRef.current?.classList.add('nav-scroll');
         navRef.current?.classList.add('shadow-md');
+        navRef.current?.classList.add('shadow-[#6867676e]');
         setIsScroll(!isScroll)
       }
       else {
         navRef.current?.classList.remove('nav-scroll');
-        navRef.current?.classList.remove('shadow-md')
+        navRef.current?.classList.remove('shadow-md');
+        navRef.current?.classList.remove('shadow-[#6867676e]');
         setIsScroll(false)
       }
     }
@@ -38,8 +40,8 @@ function Navbar() {
   }, []);
 
   return (
-    <nav ref={navRef} className="w-full z-50 absolute ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0 xl:py-3">
+    <nav ref={navRef} className="w-full z-50 absolute">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0 xl:py-3 ">
         <div className="flex justify-between items-center h-16">
 
           <div className="flex items-center">
@@ -60,7 +62,7 @@ function Navbar() {
           </div>
 
           <button className={`${themeButtonClass} hidden xl:block`} onClick={handleThemetoggle}>
-            <i className={` ${!isDark ? 'bi-moon-fill' : "bi-sun-fill"}`}></i>
+            <i className={` ${!isLight ? 'bi-sun-fill' : "bi-moon-fill"}`}></i>
           </button>
 
           <div className="flex xl:hidden items-center text-[var(--text-primary)]">
@@ -82,7 +84,7 @@ function Navbar() {
         <Link className={`${navOverlayLink} block`} to="/news">News</Link>
 
         <button className={themeButtonClass} onClick={handleThemetoggle}>
-          <i className="bi bi-moon-fill"></i>
+          <i className={` ${!isLight ? 'bi-sun-fill' : "bi-moon-fill"}`}></i>
         </button>
       </div>
     </nav>

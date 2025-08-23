@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 :root {
+    --primary-background: #161617;
+    --primary-color-light: #eee;
+    --text-primary: #eee;
+    --text-light: #adaaaa;
+    --nav-hover: #cb9545;
+    --text-secondary: #cb9545;
+    --bg-tranparent: #0000008a;
+    --bg-transparent-2: #161617;
+    --card-shadow: #cb954575;
+}
+
+.light {
     --primary-background: #f2f3f8;
     --primary-color-light: #d4d4d4;
     --text-primary: #000;
     --text-light: #3a3a3a;
-    --nav-hover: #025add;
-    --primary-blue: #025add;
-    --hero-bg-tranparent: #0000008a;
-    --bg-transparent-2: #0000008a;
     --card-shadow: #6867676e;
-}
 
-.dark {
-    --primary-background: #161617;
-    --primary-color-light: #eee;
-    --text-primary: #eee;
-    --text-light: #eee;
 }
 
 .max-w-8xl {
@@ -32,7 +34,7 @@
 .main_bg_img {
     height: 100vh;
     width: 100%;
-    background-image: url(./assets/hero-bg.png);
+    background-image: url(./assets/hero-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,7 +55,7 @@
 
 .page_header_bg {
     position: relative;
-    background-image: url(./assets/page-header-bg.png);
+    background-image: url(./assets/Untitled-1.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -63,7 +65,7 @@
     height: 100%;
     position: absolute;
     width: 100%;
-    background-color: var(--primary-background);
+    background-color: var(--bg-transparent-2);
     top: 0;
     left: 0;
     z-index: 0;

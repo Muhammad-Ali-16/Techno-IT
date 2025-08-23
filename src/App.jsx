@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <div className="main_bg_img"></div>
-      <BrowserRouter basename="/Techno-IT/">
+      <BrowserRouter basename="/bitmatrix/">
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />

@@ -1,9 +1,11 @@
 
 function About() {
   return (
-    <div>
-      About
-About
+    <div className="bg-[var(--primary-background)] text-[var(--text-primary)] py-20">
+      <div className="max-w-8xl">
+        About
+        About
+      </div>
     </div>
   )
 }
