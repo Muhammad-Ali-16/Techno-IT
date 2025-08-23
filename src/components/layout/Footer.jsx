@@ -13,19 +13,19 @@ function Footer() {
   ]
 
   const InformationLinks = [
-    { id: '1', heading: 'About' , link: '/about'},
-    { id: '2', heading: 'Pricing' , link: '/pricing'},
-    { id: '3', heading: 'Team' , link: '/teams'},
-    { id: '4', heading: 'Portfolio' , link: '/portfolio'},
-    { id: '5', heading: 'FAQs' , link: '/faqs'},
-    { id: '6', heading: 'Blog' , link: '/blog'},
-    { id: '7', heading: 'Tearms & Condition' , link: '/termsconditions'},
+    { id: '1', heading: 'About', link: '/about' },
+    { id: '2', heading: 'Pricing', link: '/pricing' },
+    { id: '3', heading: 'Team', link: '/teams' },
+    { id: '4', heading: 'Portfolio', link: '/portfolio' },
+    { id: '5', heading: 'FAQs', link: '/faqs' },
+    { id: '6', heading: 'Blog', link: '/blog' },
+    { id: '7', heading: 'Tearms & Condition', link: '/termsconditions' },
     { id: '8', heading: 'Privacy Policy', link: '/privacypolicy' }
 
   ]
 
   return (
-    <div className='h-auto w-full bg-[var(--bg-tranparent)] py-10'>
+    <div className='h-auto w-full bg-[var(--bg-tranparent)] py-10 after:content-[] after:absolute after:w-[100%] after:h-[-webkit-fill-available] after:mt-10 after:bg-[var(--bg-tranparent)]'>
       <div className="max-w-8xl">
         <div className="grid grid-rows-1 grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 text-amber-50">
 

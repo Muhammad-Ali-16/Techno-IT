@@ -25,10 +25,6 @@
     max-width: 1180px;
     padding-inline: calc(var(--spacing) * 8);
     margin: 0 auto;
-
-    /* @media (width >=80rem) {
-        padding-inline: calc(var(--spacing) * 8);
-    } */
 }
 
 .main_bg_img {
@@ -55,7 +51,7 @@
 
 .page_header_bg {
     position: relative;
-    background-image: url(./assets/Untitled-1.jpg);
+    background-image: url(./assets/page_hero_bg.jpg);
     background-size: cover;
     background-position: center center;
 }
