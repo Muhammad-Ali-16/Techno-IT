@@ -1,6 +1,7 @@
 import About from "./About"
 import Hero from "./Hero"
 import Portfolio from "./Portfolio"
+import Pricing from "./Pricing"
 import Services from "./Services"
 
 function SectionHeading({ heading }) {
@@ -19,6 +20,8 @@ function Home() {
       <section> <SectionHeading heading={'Services We Offer'} /> <Services /></section>
       <section> <SectionHeading heading={'Why Choose Us'} /> <About /></section>
       <section> <SectionHeading heading={'Our Portfolio'} /> <Portfolio /></section>
+      <section> <SectionHeading heading={'Pricing Plans'} /> <Pricing /></section>
+
     </>
   )
 }

@@ -10,16 +10,16 @@ function ContentBlock({ heading, imgUrl, direction }) {
   return (
       <div className={`m-2 xl:m-4 flex flex-row pb-4 items-center ${'left' ? "justify-end" : "justify-start"}`}>
         {direction === 'left' && (
-          <img src={imgUrl} alt="Products Icon" className='w-20 cursor-pointer transition duration-200 transform hover:scale-[1.1] mr-4' />
+          <img src={imgUrl} alt="Products Icon" className='w-14 lg:w-16 xl:w-20 cursor-pointer transition duration-200 transform hover:scale-[1.1] mr-4' />
         )}
 
         <div>
-          <h3 className='text-2xl leading-10'>{heading}</h3>
-          <p className='text-[var(--text-light)] text-xs lg:text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit Voluptas quia cum fugiat laudantium dolorem</p >
+          <h3 className='text-lg lg:text-xl xl:text-2xl leading-10'>{heading}</h3>
+          <p className='text-[var(--text-light)] text-[8px] lg:text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit Voluptas quia cum fugiat laudantium dolorem</p >
         </div>
 
         {direction === 'right' && (
-          <img src={imgUrl} alt={`${imgUrl} Icon`} className='w-20 cursor-pointer transition duration-200 transform hover:scale-[1.1] ml-4' />
+          <img src={imgUrl} alt={`${imgUrl} Icon`} className='w-14 lg:w-16 xl:w-20 cursor-pointer transition duration-200 transform hover:scale-[1.1] ml-4' />
         )}
       </div>
   )

@@ -13,8 +13,8 @@ function Hero() {
             <a href="/"><i className="bi bi-instagram"></i></a>
           </div>
           <div className="mt-7">
-            <a href="/"><button className="cursor-pointer bg-[var(--text-secondary)] mr-5 my-4 px-7 py-4 rounded-full text-sm lg:text-lg tracking-wide">Get Quotes</button></a>
-            <a href="/"><button className="cursor-pointer bg-[var(--text-secondary)] mr-5 my-4 px-7 py-4 rounded-full text-sm lg:text-lg tracking-wide">Get Started</button></a>
+            <a href="/"><button className="cursor-pointer bg-[var(--text-secondary)] mr-5 my-4 px-6 py-3 lg:px-7 lg:py-4 rounded-full text-[8px] lg:text-lg tracking-wide">Get Quotes</button></a>
+            <a href="/"><button className="cursor-pointer bg-[var(--text-secondary)] mr-5 my-4 px-6 py-3 lg:px-7 lg:py-4 rounded-full text-[8px] lg:text-lg tracking-wide">Get Started</button></a>
           </div>
         </div>
       </div>
