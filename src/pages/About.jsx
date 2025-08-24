@@ -6,18 +6,16 @@ import Pricing from '../assets/pricing.png'
 import Delivery from '../assets/delivery.png'
 import Support from '../assets/support.png'
 
-
-
 function ContentBlock({ heading, imgUrl, direction }) {
   return (
-      <div className={`m-4 flex flex-row pb-4 ${'left' ? "justify-end" : "justify-start"}`}>
+      <div className={`m-2 xl:m-4 flex flex-row pb-4 items-center ${'left' ? "justify-end" : "justify-start"}`}>
         {direction === 'left' && (
           <img src={imgUrl} alt="Products Icon" className='w-20 cursor-pointer transition duration-200 transform hover:scale-[1.1] mr-4' />
         )}
 
         <div>
           <h3 className='text-2xl leading-10'>{heading}</h3>
-          <p className='text-[var(--text-light)] text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit Voluptas quia cum fugiat laudantium dolorem</p >
+          <p className='text-[var(--text-light)] text-xs lg:text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit Voluptas quia cum fugiat laudantium dolorem</p >
         </div>
 
         {direction === 'right' && (
@@ -26,7 +24,6 @@ function ContentBlock({ heading, imgUrl, direction }) {
       </div>
   )
 }
-
 
 function About() {
 
@@ -43,7 +40,7 @@ function About() {
   ]
 
   return (
-    <div className="bg-[var(--primary-background)] text-[var(--text-primary)] py-20">
+    <div className="bg-[var(--primary-background)] text-[var(--text-primary)] pt-20 pb-8">
       <div className="max-w-8xl">
         <div className="grid grid-rows-1 grid-cols-1 xl:grid-cols-3 gap-10">
        
