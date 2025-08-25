@@ -32,7 +32,7 @@ function Pricing() {
                     </p>
                   ))}
                 </div>
-                <a href='/'><button className="cursor-pointer bg-[var(--text-secondary)] mt-6 my-4 px-6 py-3 lg:px-7 lg:py-4 rounded-full text-[8px] lg:text-lg tracking-wide">Subscribe Now!</button></a>
+                <a href='/'><button className="text-white cursor-pointer bg-[var(--text-secondary)] mt-6 my-4 px-6 py-3 lg:px-7 lg:py-4 rounded-full text-[8px] lg:text-lg tracking-wide">Subscribe Now!</button></a>
 
               </div>
             </div>

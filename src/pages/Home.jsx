@@ -3,6 +3,7 @@ import Hero from "./Hero"
 import Portfolio from "./Portfolio"
 import Pricing from "./Pricing"
 import Services from "./Services"
+import Testimonials from "./Testimonials"
 
 function SectionHeading({ heading }) {
   return (
@@ -21,6 +22,7 @@ function Home() {
       <section> <SectionHeading heading={'Why Choose Us'} /> <About /></section>
       <section> <SectionHeading heading={'Our Portfolio'} /> <Portfolio /></section>
       <section> <SectionHeading heading={'Pricing Plans'} /> <Pricing /></section>
+      <section> <SectionHeading heading={'Testimonials'} /> <Testimonials /></section>
 
     </>
   )
