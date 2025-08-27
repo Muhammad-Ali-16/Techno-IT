@@ -21,7 +21,7 @@ function Testimonials() {
     <div className="bg-[var(--primary-background)] text-[var(--text-primary)] pt-20 pb-8">
       <div className="max-w-8xl">
 
-        <Swiper
+        <Swiper className='testimonials-swiper'
           slidesPerView={3}
           spaceBetween={20}
           loop={true}

@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <div className="main_bg_img"></div>
-      <BrowserRouter basename="/bitmatrix/">
+      <BrowserRouter basename="/bitmatrix/" className="overflow-x-hidden">
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />

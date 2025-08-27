@@ -2,6 +2,7 @@
 
 :root {
     --primary-background: #161617;
+    --secondary-background: #1e1e1e;
     --primary-color-light: #eee;
     --text-primary: #eee;
     --text-light: #adaaaa;
@@ -15,6 +16,7 @@
 
 .light {
     --primary-background: #f2f3f8;
+    --secondary-background: #eeeeee;
     --primary-color-light: #d4d4d4;
     --text-primary: #000;
     --text-light: #3a3a3a;
