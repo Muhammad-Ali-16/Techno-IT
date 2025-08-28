@@ -4,12 +4,12 @@ import logo from '../../assets/logo.png';
 function Footer() {
 
   const ServicesLinks = [
-    { id: '1', heading: 'Web Design' },
-    { id: '2', heading: 'App Development' },
-    { id: '3', heading: 'Cloud Server' },
-    { id: '4', heading: 'Domain & Hosting' },
-    { id: '5', heading: 'SEO Optimization' },
-    { id: '6', heading: 'Social Media' }
+    { id: '1', heading: 'Web Design', Url: '/services' },
+    { id: '2', heading: 'App Development', Url: '/services' },
+    { id: '3', heading: 'Cloud Server', Url: '/services' },
+    { id: '4', heading: 'Domain & Hosting', Url: '/services' },
+    { id: '5', heading: 'SEO Optimization', Url: '/services' },
+    { id: '6', heading: 'Social Media', Url: '/services' }
   ]
 
   const InformationLinks = [
@@ -46,7 +46,7 @@ function Footer() {
             <h5 className='text-xl text-[var(--text-secondary)] font-semibold my-2'>Services</h5>
             {ServicesLinks.map((ServicesLink) => (
               <div className="hover:text-[var(--text-secondary)]" key={ServicesLink.id}>
-                <Link to="/">{ServicesLink.heading}</Link></div>
+                <Link to={ServicesLink.Url}>{ServicesLink.heading}</Link></div>
             ))}
           </div >
 
@@ -68,6 +68,7 @@ function Footer() {
           </div>
 
         </div >
+        <div className="text-center text-[var(--text-primary)] mt-8 text-lg">Designed By <a href="https://github.com/Muhammad-Ali-16" className="underline text-[var(--text-secondary)]" target='_blank'>Ali Raza</a></div>
       </div >
     </div >
   )

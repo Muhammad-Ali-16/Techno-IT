@@ -11,17 +11,11 @@
     --bg-tranparent: #0000008a;
     --bg-transparent-2: #161617;
     --card-shadow: #cb954575;
+    --input-bg: #1e1e1e;
 }
 
-
-.light {
-    --primary-background: #f2f3f8;
-    --secondary-background: #eeeeee;
-    --primary-color-light: #d4d4d4;
-    --text-primary: #000;
-    --text-light: #3a3a3a;
-    --card-shadow: #6867676e;
-
+body{
+    overflow-x: hidden;
 }
 
 .max-w-8xl {
@@ -43,7 +37,7 @@
 
 .nav-scroll {
     position: fixed;
-    top: -90px;
+    top: -90.5px;
     left: 0;
     width: 100%;
     transform: translateY(90px);

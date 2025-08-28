@@ -4,19 +4,12 @@ import logo from '../../assets/logo.png';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLight, setIsLight] = useState(false)
   const [isScroll, setIsScroll] = useState(false)
   const navRef = useRef(null)
 
   const navLink = `px-3 py-2 text-sm font-medium transition duration-200 hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] ${isScroll ? 'text-[var(--text-primary)]' : 'text-[#eee]'}`;
   const navOverlayLink = `px-3 py-2 text-sm font-medium transition duration-200 hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] text-[var(--text-primary)]`;
-  const themeButtonClass = "flex items-center justify-center rounded-full bg-[var(--primary-color-light)] w-12 h-12 cursor-pointer";
-
-  const handleThemetoggle = () => {
-    document.documentElement.classList.toggle("light");
-    setIsLight(!isLight)
-  };
-
+  
   useEffect(() => {
     const HandleScroll = () => {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -61,10 +54,6 @@ function Navbar() {
 
           </div>
 
-          <button className={`${themeButtonClass} hidden xl:block`} onClick={handleThemetoggle}>
-            <i className={` ${!isLight ? 'bi-sun-fill' : "bi-moon-fill"}`}></i>
-          </button>
-
           <div className="flex xl:hidden items-center text-[var(--text-primary)]">
             <button className={`cursor-pointer ${isScroll ? 'text-[var(--text-primary)]' : 'text-[#eee]'}`} onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? (<i className="bi bi-x text-3xl"></i>) : (<i className="bi bi-list text-3xl"></i>)}
@@ -83,9 +72,6 @@ function Navbar() {
         <Link className={`${navOverlayLink} block`} to="/faqs">FAQs</Link>
         <Link className={`${navOverlayLink} block`} to="/news">News</Link>
 
-        <button className={themeButtonClass} onClick={handleThemetoggle}>
-          <i className={` ${!isLight ? 'bi-sun-fill' : "bi-moon-fill"}`}></i>
-        </button>
       </div>
     </nav>
   );
